@@ -1,0 +1,24 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #f4f7f8;
+}
+.card img{
+    width: 250px;
+    height: 150px;
+}
+.card{
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Shadow effect */
+    transition: 0.3s;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.cardInfo{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}

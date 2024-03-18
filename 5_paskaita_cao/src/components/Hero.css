@@ -1,0 +1,55 @@
+.heroContainer{
+    padding: 10px;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+.heroContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../assets/heroPicture.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    z-index: -1;
+}
+  
+.heroContainer h1,
+.heroContainer p {
+    position: relative;
+    z-index: 1;
+}
+.heroTitleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.heroTitleContainer button{
+    padding: 10px 5px;
+    background-color: #93b3b0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+.heroTitleContainer h1{
+    font-weight: 400;
+}
+.heroTitleContainer p {
+    font-weight: 400;
+}

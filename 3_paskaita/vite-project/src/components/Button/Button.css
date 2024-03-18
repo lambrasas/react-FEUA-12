@@ -1,0 +1,13 @@
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    padding: 5px 10px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+
+}

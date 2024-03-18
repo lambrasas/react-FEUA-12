@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  padding: 0 15px;
+  background-color:#f1f1f1 ;
+}
+.logoDiv{
+  background-color: white;
+}
+.logo{
+  width: 100px;
+}
+.optionsDiv{
+  display: flex;
+  gap: 20px;
+  background-color: #1c3441;
+  padding: 20px;
+}
+.optionsDiv a{
+  color:white;
+
+}
+.heroDiv  {
+  margin-top: 25px;
+  width: 100%;
+  height: 600px;
+  object-position: center;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  width: 100%;
+  background-color:#f1f1f1 ;
+  padding: 15px 0;
+  justify-content: center;
+
+}
+.aboutCard{
+  background-color: white;
+  padding: 20px;
+  max-width: 400px;
+  
+}
+.aboutCard p{
+  text-align: left;
+  
+}
+.contentDiv{
+  display: flex;
+  background-color: white;
+  padding: 15px;
+}
+.contentTextContainer{
+  width: 68%;
+}
+.contentTextContainer p {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.contentTextContainer h1:nth-of-type(1){
+  font-size: 35px;
+}
+.contentTextContainer h1{
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.navigationContainer{
+  width: 32%;
+}
+.navigationButtons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f1f1f1;
+  padding: 10px;
+  
+}
+.navigationButtons button{
+  padding: 10px 0;
+  background: none;
+  border: none;
+  font-size: 15px;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
+import "./InputContainer.css";
 
 const InputContainer = ({ addTask }) => {
   const [task, setTask] = useState("");
@@ -9,7 +10,7 @@ const InputContainer = ({ addTask }) => {
     addTask(task);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="inputForm" onSubmit={handleSubmit}>
       <Input task={task} setTask={setTask} />
       <SubmitButton />
     </form>

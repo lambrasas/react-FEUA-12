@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TaskTable from "./components/TaskTable";
 import { task } from "./models/task.js";
+import "./App.css";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -9,7 +10,7 @@ const App = () => {
     setTasks((prevTask) => [...prevTask, newTask]);
   };
   return (
-    <div>
+    <div className="WholeThing">
       <TaskTable tasks={tasks} addTask={addTask} />
     </div>
   );

@@ -1,12 +1,15 @@
 import React from "react";
 import TaskList from "./TaskList";
 import InputContainer from "./InputContainer";
+import "./TaskTable.css";
 const TaskTable = ({ tasks, addTask }) => {
   return (
-    <div>
+    <div className="TaskTable">
       <h1>You have {tasks.length} todos</h1>
-      <TaskList tasks={tasks} />
-      <InputContainer addTask={addTask} />
+      <div className="InputAndList">
+        <InputContainer addTask={addTask} />
+        <TaskList tasks={tasks} />
+      </div>
     </div>
   );
 };

@@ -1,11 +1,10 @@
 import React from "react";
+import "../components/SingleTask.css";
 const SingleTask = ({ task }) => {
   return (
-    <div>
+    <div className="singleTask">
       <p>{task.name}</p>
-      <button onClick={deleteTask} key={task.id}>
-        X
-      </button>
+      <button key={task.id}>X</button>
     </div>
   );
 };

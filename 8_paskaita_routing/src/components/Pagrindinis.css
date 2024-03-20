@@ -1,0 +1,8 @@
+.heroPicture {
+  background-image: url("../assets/hero.svg");
+  width: 100vw;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

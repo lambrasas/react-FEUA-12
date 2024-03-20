@@ -1,0 +1,9 @@
+.paslaugaCard {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+}
+.paslaugaCard p {
+  max-width: 200px;
+}

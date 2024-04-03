@@ -1,4 +1,3 @@
-import React from "react";
 import Pagrindinis from "../pages/Pagrindinis";
 import Naujienos from "../pages/Naujienos";
 import ApieMus from "../pages/ApieMus";

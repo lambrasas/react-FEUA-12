@@ -43,7 +43,10 @@ const EditUser = () => {
     // ...user nuklonuoja visus parametrus ir perraso i tuos pacius
     // [event.target.name]: event.target.value
     // age: event.target.value
+    console.log(user);
     setUser({ ...user, [event.target.name]: event.target.value });
+    console.log(user);
+    console.log(event.target);
   };
 
   if (isLoading) {

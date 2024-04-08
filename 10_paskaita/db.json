@@ -7,8 +7,31 @@
     },
     {
       "name": "Linas",
-      "surname": "As",
+      "surname": "ambrasass",
+      "id": 2,
+      "age": ""
+    },
+    {
+      "name": "asdadasdas",
+      "surname": "asdsadasdasd",
+      "id": 3
+    }
+  ],
+  "courses": [
+    {
+      "name": "Front-end kursai",
+      "price": 5000,
+      "id": 1
+    },
+    {
+      "name": "Back-end kursai",
+      "price": 6000,
       "id": 2
+    },
+    {
+      "name": "Full-stack kursai",
+      "price": 10000,
+      "id": 3
     }
   ]
 }

@@ -23,7 +23,7 @@ const Home = () => {
         .finally(() => {
           setIsLoading(false);
         });
-    }, 2000);
+    }, 1000);
   }, []);
 
   const handleEditUser = (id) => {
@@ -49,6 +49,7 @@ const Home = () => {
       <button onClick={() => navigate(ROUTES.NEW_USER)}>
         Create new student
       </button>
+      <button onClick={() => navigate(ROUTES.COURSES)}>Go to courses</button>
       <UserList
         users={users}
         handleEditUser={handleEditUser}

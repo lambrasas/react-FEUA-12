@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 150px;
+  }
+}
+.link {
+  text-decoration: none;
+  color: #fd7f16;
+  font-size: 17px;
+}
+.linksDiv {
+  display: flex;
+  gap: 10px;
+}

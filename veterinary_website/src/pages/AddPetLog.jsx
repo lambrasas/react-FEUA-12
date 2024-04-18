@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "../components/DefaultApi/API";
 import StyledButton from "../components/styles/StyledButton";
+import { useNavigate } from "react-router-dom";
 const AddPetLog = () => {
+  const navigate = useNavigate();
   const { petId } = useParams();
   const [options, setOptions] = useState([]);
   const [selectedMedication, setSelectedMedication] = useState("");
@@ -43,7 +45,10 @@ const AddPetLog = () => {
       body: JSON.stringify(postData),
     })
       .then((response) => response.json())
-      .then((data) => console.log("Medication attached with date:", data))
+      .then((data) => {
+        console.log("Medication attached with date:", data);
+        navigate(`/pets/${petId}`);
+      })
       .catch((error) => console.error("Error attaching medication:", error));
   };
   return (

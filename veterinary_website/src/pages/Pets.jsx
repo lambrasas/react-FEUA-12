@@ -4,6 +4,7 @@ import { API } from "../components/DefaultApi/API";
 import styles from "../components/styles/Pets.module.scss";
 import classNames from "classnames";
 import StyledButton from "../components/styles/StyledButton";
+import { Link } from "react-router-dom";
 const Pets = () => {
   const [pets, setPets] = useState([]);
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const Pets = () => {
         }}
       >
         <h1>Pet List</h1>
-        <StyledButton> Add Pet</StyledButton>
+        <StyledButton onClick={() => navigate("/addPet")}>Add Pet</StyledButton>
       </div>
       <div className={styles.petCardsContainer}>
         {pets.map((pet) => (
@@ -45,7 +46,11 @@ const Pets = () => {
             style={{ display: "flex", gap: "10px" }}
           >
             <div className={styles.petName}>{pet.name}</div>
-            <div>{pet.birthDate || "Birthdate not available"}</div>
+            <div>
+              {pet.birthDate
+                ? new Date(pet.birthDate).toLocaleDateString()
+                : "Birthdate not available"}
+            </div>
             <div>{pet.ownerEmail}</div>
             <div className={styles.buttonsDiv}>
               <StyledButton onClick={() => navigate(`/pets/${pet._id}`)}>

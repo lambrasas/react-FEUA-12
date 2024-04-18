@@ -5,6 +5,7 @@ import Medications from "./pages/Medications";
 import Pets from "./pages/Pets";
 import PetDetails from "./pages/PetDetails";
 import AddPetLog from "./pages/AddPetLog";
+import AddPet from "./pages/AddPet";
 const App = () => {
   return (
     <Router>
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/medications" element={<Medications />} />
         <Route path="/pets/:petId" element={<PetDetails />} />
         <Route path="/pets/:petId/addLog" element={<AddPetLog />} />
+        <Route path="/addPet" element={<AddPet />} />
       </Routes>
     </Router>
   );

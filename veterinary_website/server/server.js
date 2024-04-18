@@ -87,7 +87,30 @@ app.get("/pets/:petId/medicationlogs", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
+app.post("/pets", async (req, res) => {
+  const { name, birthDate, ownerEmail, ownerName } = req.body;
+  const birthDateObject = new Date(birthDate);
+  try {
+    let user = await User.findOne({ email: ownerEmail });
+    if (!user) {
+      user = new User({
+        name: ownerName,
+        email: ownerEmail,
+      });
+      await user.save();
+    }
+    const newPet = new Pet({
+      name: name,
+      birthDate: birthDateObject,
+      userId: user._id,
+    });
+    const savedPet = await newPet.save();
+    res.status(201).json(savedPet);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: error.message });
+  }
+});
 app.post("/pets/:petId/addmedications", async (req, res) => {
   const { petId } = req.params;
   const { medicationId, dateAdministered } = req.body;

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const petSchema = new mongoose.Schema({
   name: String,
-  birthdate: String,
+  birthDate: Date,
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",

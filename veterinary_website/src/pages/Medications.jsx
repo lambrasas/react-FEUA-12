@@ -1,7 +1,5 @@
-import React from "react";
-
 const Medications = () => {
-  return <div>Medications</div>;
+  return <div></div>;
 };
 
 export default Medications;

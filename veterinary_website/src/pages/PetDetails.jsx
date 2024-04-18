@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "../components/DefaultApi/API";
 import StyledButton from "../components/styles/StyledButton";
-import Dropdown from "../components/Inputs/Dropdown";
 import { Link } from "react-router-dom";
 const PetDetails = () => {
   const { petId } = useParams();

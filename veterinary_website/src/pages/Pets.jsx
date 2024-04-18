@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { API } from "../components/DefaultApi/API";
 import styles from "../components/styles/Pets.module.scss";
-import classNames from "classnames";
+
 import StyledButton from "../components/styles/StyledButton";
-import { Link } from "react-router-dom";
+
 const Pets = () => {
   const [pets, setPets] = useState([]);
   const navigate = useNavigate();

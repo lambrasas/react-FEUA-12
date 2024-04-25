@@ -1,8 +1,11 @@
-import React from "react";
-import LoginForm from "./components/LoginForm";
+import SelectForm from "./components/SelectForm";
 
 const App = () => {
-  return <LoginForm />;
+  return (
+    <div>
+      <SelectForm />
+    </div>
+  );
 };
 
 export default App;

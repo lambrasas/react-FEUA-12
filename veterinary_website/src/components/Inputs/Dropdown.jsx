@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
+import styles from "../../components/styles/Dropdown.module.scss";
 const Dropdown = ({ options, onChange }) => {
   return (
     <div>
-      <select onChange={onChange}>
+      <select className={styles.dropDown} onChange={onChange}>
         {options.map((option) => (
-          <option key={option.id} value={option.id}>
+          <option
+            style={{ textAlign: "center" }}
+            key={option.id}
+            value={option.id}
+          >
             {option.value}
           </option>
         ))}

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { API } from "../components/DefaultApi/API";
 import StyledButton from "../components/styles/StyledButton";
 import { Link } from "react-router-dom";
+import styles from "../components/styles/PetDetails.module.scss";
 const PetDetails = () => {
   const { petId } = useParams();
   const [petDetails, setPetDetails] = useState(null);
@@ -17,15 +18,23 @@ const PetDetails = () => {
   if (!petDetails) {
     return <div>Loading pet details...</div>;
   }
+  const formatDate = (isoDateString) => {
+    const date = new Date(isoDateString);
+    return date.toISOString().split("T")[0];
+  };
   const medicationEntries = petDetails.medicationLogs.map((log) => (
-    <div key={log._id}>
-      <h3>{log.medicationId.name}</h3>
+    <div className={styles.PetMedicationCard} key={log._id}>
+      <h2 className={styles.medicationName}>{log.medicationId.name}</h2>
       <div>
-        <p>Common uses: </p>
+        <h3>Common uses: </h3>
         {log.medicationId.commonUses.map((use, index) => (
-          <p key={index}>{use}</p>
+          <p className={styles.commonUse} key={index}>
+            {use}
+          </p>
         ))}
-        <p>{log.date}</p>
+        <div className={styles.dateWrapper}>
+          <p>{formatDate(log.date)}</p>
+        </div>
       </div>
     </div>
   ));
@@ -34,13 +43,22 @@ const PetDetails = () => {
       <div>
         <h1>{petDetails.name}: Health Records</h1>
         <div>
-          <StyledButton>
-            <Link to={`/pets/${petId}/addMedication`}>Add medication</Link>
-          </StyledButton>
-          <StyledButton>
-            <Link to={`/pets/${petId}/addLog`}>Add log</Link>
-          </StyledButton>
-          <div>{medicationEntries}</div>
+          <div className={styles.detailsPetButtonContainer}>
+            <StyledButton>
+              <Link className={styles.link} to={`/pets/${petId}/addMedication`}>
+                Add Medication{" "}
+              </Link>
+            </StyledButton>
+            <StyledButton>
+              <Link className={styles.link} to={`/pets/${petId}/addLog`}>
+                Add Log
+              </Link>
+            </StyledButton>
+          </div>
+
+          <div className={styles.medicationEntriesContainer}>
+            {medicationEntries}
+          </div>
         </div>
       </div>
     </div>

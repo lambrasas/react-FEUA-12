@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { API } from "../components/DefaultApi/API";
 import StyledButton from "../components/styles/StyledButton";
 import { useNavigate } from "react-router-dom";
+import styles from "../components/styles/AddPetMedication.module.scss";
 const AddPetLog = () => {
   const navigate = useNavigate();
   const { petId } = useParams();
@@ -52,10 +53,15 @@ const AddPetLog = () => {
       .catch((error) => console.error("Error attaching medication:", error));
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.addMedicationFormContainer}>
+      <form className={styles.addMedicationForm} onSubmit={handleSubmit}>
         <Dropdown options={options} onChange={handleMedicationChange} />
-        <input type="date" onChange={handleDateChange} value={medicationDate} />
+        <input
+          className={styles.dateInput}
+          type="date"
+          onChange={handleDateChange}
+          value={medicationDate}
+        />
         <StyledButton type="submit">Submit</StyledButton>
       </form>
     </div>
